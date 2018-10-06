@@ -1,0 +1,7 @@
+[SECURITY_VMS]
+192.168.56.102
+
+
+[SECURITY_VMS:vars]
+ansible_ssh_user=debian
+

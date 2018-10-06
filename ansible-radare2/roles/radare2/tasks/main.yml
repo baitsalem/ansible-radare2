@@ -1,0 +1,28 @@
+---    
+
+- name: Installer les paquets apt requis pour l'installation Radare2
+
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+   
+  with_items:
+ 
+      - swig3.0 
+      - g++ 
+      - valabind
+
+
+- name: Download radare2 
+  git:
+    repo: https://github.com/radare/radare2.git
+    dest: /tmp/radare2
+
+
+- name: Install radare2
+  command: sys/install.sh
+  args:
+    chdir: /tmp/radare2
+
+

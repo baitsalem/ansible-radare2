@@ -1,0 +1,17 @@
+---
+# This playbook deploys the whole application stack in this site.
+
+
+ 
+- name: Installation de Radare2
+
+  hosts: SECURITY_VMS
+  remote_user: debian
+  become: true
+  become_method: sudo
+
+  roles:
+    - radare2
+
+
+    
