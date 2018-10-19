@@ -17,12 +17,12 @@
 - name: Download radare2 
   git:
     repo: https://github.com/radare/radare2.git
-    dest: /tmp/radare2
+    dest: /opt/radare2
 
 
 - name: Install radare2
   command: sys/install.sh
   args:
-    chdir: /tmp/radare2
+    chdir: /opt/radare2
 
 
